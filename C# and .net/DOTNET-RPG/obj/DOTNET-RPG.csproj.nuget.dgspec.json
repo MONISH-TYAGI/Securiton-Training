@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj": {}
+    "C:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj": {}
   },
   "projects": {
-    "c:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj": {
+    "C:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj",
+        "projectUniqueName": "C:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj",
         "projectName": "DOTNET-RPG",
-        "projectPath": "c:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj",
+        "projectPath": "C:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj",
         "packagesPath": "C:\\Users\\Tym\\.nuget\\packages\\",
-        "outputPath": "c:\\Training\\DOTNET-RPG\\obj\\",
+        "outputPath": "C:\\Training\\DOTNET-RPG\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tym\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,7 +21,8 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
