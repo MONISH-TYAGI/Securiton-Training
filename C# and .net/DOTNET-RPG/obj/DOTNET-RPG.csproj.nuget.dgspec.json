@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj": {}
+    "C:\\Training\\C# and .net\\DOTNET-RPG\\DOTNET-RPG.csproj": {}
   },
   "projects": {
-    "C:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj": {
+    "C:\\Training\\C# and .net\\DOTNET-RPG\\DOTNET-RPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj",
+        "projectUniqueName": "C:\\Training\\C# and .net\\DOTNET-RPG\\DOTNET-RPG.csproj",
         "projectName": "DOTNET-RPG",
-        "projectPath": "C:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj",
+        "projectPath": "C:\\Training\\C# and .net\\DOTNET-RPG\\DOTNET-RPG.csproj",
         "packagesPath": "C:\\Users\\Tym\\.nuget\\packages\\",
-        "outputPath": "C:\\Training\\DOTNET-RPG\\obj\\",
+        "outputPath": "C:\\Training\\C# and .net\\DOTNET-RPG\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tym\\AppData\\Roaming\\NuGet\\NuGet.Config",

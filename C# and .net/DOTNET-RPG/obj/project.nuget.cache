@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ZoNzTNqtYBhcUu8CrwJFsrA5DPVvVuislKlxaZcv5CQkCIJ0leryMnSbuTO/2RcvHQBVTSHcezzsavR8pSWAg==",
+  "dgSpecHash": "P1WBvkKOEJzTE8CCp5SVLR0WHpGlD3gTnoSRSrnlhgvl2Dw5rWkaLWe/ztFFzDmk3uCzADP6bsSH/zA0gBs4Lw==",
   "success": true,
-  "projectFilePath": "C:\\Training\\DOTNET-RPG\\DOTNET-RPG.csproj",
+  "projectFilePath": "C:\\Training\\C# and .net\\DOTNET-RPG\\DOTNET-RPG.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tym\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.2\\microsoft.aspnetcore.openapi.8.0.2.nupkg.sha512",
     "C:\\Users\\Tym\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
