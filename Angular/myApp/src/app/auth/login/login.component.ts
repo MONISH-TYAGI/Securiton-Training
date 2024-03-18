@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {LoginForm} from '../../types/auth';
 // import { AuthService } from '../auth.servi/ce';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,8 +13,16 @@ form:LoginForm={
   email:'',
   password:'',
 }
-submit()
-{
-  console.log(this.form)
-}
+
+constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {}
+
+  submit() {
+    this.authService.login(this.form);
+  }
+
+  isLoading() {
+    return this.authService.isLoading;
+  }
 }
