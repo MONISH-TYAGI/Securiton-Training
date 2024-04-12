@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "HospitalManagementSystem2": {
+    "project3": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/hospital-management-system2",
+            "outputPath": "dist/project3",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -37,7 +37,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -67,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "HospitalManagementSystem2:build:production"
+              "buildTarget": "project3:build:production"
             },
             "development": {
-              "buildTarget": "HospitalManagementSystem2:build:development"
+              "buildTarget": "project3:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "HospitalManagementSystem2:build"
+            "buildTarget": "project3:build"
           }
         },
         "test": {
@@ -101,8 +106,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
