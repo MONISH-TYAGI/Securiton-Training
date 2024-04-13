@@ -56,4 +56,5 @@ updateData(item:string)
   console.log(item)
   this.status=item;
 }
+current:any="";
 }
