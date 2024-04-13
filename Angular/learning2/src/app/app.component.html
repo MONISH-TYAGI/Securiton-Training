@@ -78,3 +78,5 @@
 <input type="text" [(ngModel)]="current" placeholder="Enter Name"/>
 <br/>
 <h2>{{current}}</h2>
+<input type="text" #box name="user" placeholder="Enter user name"/>
+<button (click)="getVal(box)">Call Function</button>

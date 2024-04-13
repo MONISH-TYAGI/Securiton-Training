@@ -57,4 +57,8 @@ updateData(item:string)
   this.status=item;
 }
 current:any="";
+getVal(item:HTMLInputElement)
+{
+  console.warn(item);
+}
 }
