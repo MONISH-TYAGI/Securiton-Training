@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserAuthModule } from './user-auth/user-auth.module';
-// import { LoginComponent } from './user-auth/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { ChildComponent } from './child/child.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,11 @@ import { UserAuthModule } from './user-auth/user-auth.module';
   imports: [
     BrowserModule,
     UserAuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HeaderComponent,
+    FormsModule,
+    ChildComponent,
+    UserDetailsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

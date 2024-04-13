@@ -1,4 +1,5 @@
 <h1>Hello App</h1>
+<app-header></app-header>
 <app-login></app-login>
 <button (click)="getData('click')">Click me</button>    
 <input type="text" #box (keyup)="getData(box.value)"    placeholder="Enter "/>
@@ -38,4 +39,39 @@
 
 </div>
 <h3 *ngFor="let item of users">Name is : {{item}}</h3>
-<h3 *ngFor="let item of userDetails">Name is : {{item}}</h3>
+<h3 *ngFor="let item of userDetails">Details is : {{item.name}} --- {{item.email}} ----{{item.age}}</h3>
+<h1 [style.Color]="color" [style.backgroundColor]="bgColor">{{title}}</h1>
+<button (click)="updateColor()">Change Color</button>
+
+<form #basicForm="ngForm" (ngSubmit)="getData2(basicForm.value)">
+  <input type="text" name="name" ngModel placeholder="Enter Name" required/>
+  <br/>
+  <input type="email" name="email" ngModel placeholder="Enter Email" required/>
+  <br/>
+  <input type="number" name="age" ngModel placeholder="Enter Age" required/>
+  <br/>
+  <button>Register</button>
+</form>
+<ul>
+  <li>{{userData.name}}</li>
+  <li>{{userData.email}}</li>
+  <li>{{userData.age}}</li>
+</ul>
+<h1>Partition</h1>
+<input type="text" placeholder="Enter new Task" #task/>
+<br/>
+<button (click)="addTask(task.value)">Add</button>
+<br/>
+<ul *ngFor="let item of list">
+  <li>{{item.name}}  <button (click)="removeTask(item.id)">Remove</button></li>
+</ul>
+<br/>
+<br/>
+<br/>
+<app-child [item]="value" (updateDataEvent)="updateData($event)"></app-child>
+<h2>{{status}}</h2>
+<button (click)="updateChild()">Update Child Component</button>
+<ul *ngFor="let user of userDetails">
+  <app-user-details [item]="user"></app-user-details>
+
+</ul>
