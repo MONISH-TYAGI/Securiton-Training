@@ -1,4 +1,27 @@
 <h1>Hello App</h1>
+<h1>Routing</h1>
+<a routerLink="">Home</a>
+<br/>
+<a routerLink="about">About</a>
+<br/>
+<a routerLink="user">User</a>
+<br/>
+<br/>
+<a routerLink="user/1">User 1</a>
+<br/>
+<a routerLink="user/2">User 2</a>
+<br/>
+<a routerLink="user/3">User 3</a>
+<br/>
+<router-outlet></router-outlet>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <app-header></app-header>
 <app-login></app-login>
 <button (click)="getData('click')">Click me</button>    
@@ -43,7 +66,7 @@
 <h1 [style.Color]="color" [style.backgroundColor]="bgColor">{{title}}</h1>
 <button (click)="updateColor()">Change Color</button>
 
-<form #basicForm="ngForm" (ngSubmit)="getData2(basicForm.value)">
+<!-- <form #basicForm="ngForm" (ngSubmit)="getData2(basicForm.value)">
   <input type="text" name="name" ngModel placeholder="Enter Name" required/>
   <br/>
   <input type="email" name="email" ngModel placeholder="Enter Email" required/>
@@ -51,7 +74,7 @@
   <input type="number" name="age" ngModel placeholder="Enter Age" required/>
   <br/>
   <button>Register</button>
-</form>
+</form> -->
 <ul>
   <li>{{userData.name}}</li>
   <li>{{userData.email}}</li>
@@ -80,3 +103,30 @@
 <h2>{{current}}</h2>
 <input type="text" #box name="user" placeholder="Enter user name"/>
 <button (click)="getVal(box)">Call Function</button>
+<h2>{{today | date:'fullDate'}}</h2>
+<h3>{{2.3 | number : '3.3-5'}}</h3>
+<h3>{{20 | currency:"INR"}}</h3>
+<h3>{{"hello how are you "}}</h3>
+<br/>
+<br/>
+<!-- <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+  <input type="text" name="username" ngModel placeholder="Enter Username" />
+  <br/>
+  <input type="password" name="password" ngModel placeholder="Enter Password"  />
+  <br/>
+  <button>Login</button>
+  </form> -->
+  <br/>
+  <br/>
+  <!-- <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <input type="text" name="username" ngModel placeholder="Enter Username" formControlName="user" />
+    <br/>
+    <span style="color:red;" *ngIf="user && user.invalid && user.touched">This field is not valid</span>
+    <br/>
+    <input type="password" name="password" ngModel placeholder="Enter Password" formControlName="password"  />
+    <br/>
+    <span style="color:red;" *ngIf="password && user.password && user.touched">This field is not valid</span>
+    <br/>
+    <button [disabled]="loginForm.invalid" >Login</button>
+    </form> -->
+    <br/>

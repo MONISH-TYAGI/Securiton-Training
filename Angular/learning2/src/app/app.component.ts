@@ -1,11 +1,26 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, Validators } from '@angular/forms';
+import {FormControl,FormControlName,FormGroup} from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })  
 export class AppComponent {
+  loginForm=new FormGroup({
+ user:new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z]+$')]),  
+  password:new FormControl('',[Validators.required,Validators.minLength(5)])
+  });
+  loginUser()
+  {
+    console.warn(this.loginForm.value);
+  }
+  get user(){
+    return this.loginForm.get('user');
+  }
+  get password(){
+    return this.loginForm.get('password');
+  }
   title = 'learning1';
   userData:any={};
  
@@ -61,4 +76,33 @@ getVal(item:HTMLInputElement)
 {
   console.warn(item);
 }
+currVal=10;
+data2:{name:string,phn:number}={name:"monish",phn:1234567890};
+item2:string[]=["monish","anil","sam"];
+getData5(item:number[])
+{
+  console.warn(item);
+  return item;
+}
+//this.getData5([5]); // this not run because ts file ke method html mai call krte hai directly not within ts file function 
+getItem(){
+this.getData5([20]);
+}
+getData3(currVal:number | string){
+  if(typeof currVal==="number"){
+return currVal*20;
+}
+return currVal;
+}
+getData4()
+{
+  this.getData3("hello")
+}
+today=Date(); 
+userLogin(item:any)
+{
+  console.warn(item);
+
+}
+
 }

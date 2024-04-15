@@ -4,9 +4,10 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserAuthModule } from './user-auth/user-auth.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ChildComponent } from './child/child.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,10 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     AppRoutingModule,
     HeaderComponent,
     FormsModule,
-    ChildComponent,
-    UserDetailsComponent
+    ChildComponent, 
+    UserDetailsComponent,
+    ReactiveFormsModule,
+    RouterModule, // Add RouterModule here
   ],
   providers: [],
   bootstrap: [AppComponent]
