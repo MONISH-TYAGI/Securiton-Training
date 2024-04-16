@@ -1,12 +1,24 @@
 import { Component } from '@angular/core';
 import { NgForm, Validators } from '@angular/forms';
 import {FormControl,FormControlName,FormGroup} from '@angular/forms';
+import { UserdataService } from './services/userdata.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })  
 export class AppComponent {
+  users2:any;
+  constructor(private userdata:UserdataService)
+  {
+    console.log("userdata",userdata.users())
+    this.users2=userdata.users();
+    userdata.users().subscribe((data)=>{
+      console.warn(data)
+      this.users2=data;
+    });
+  }
   loginForm=new FormGroup({
  user:new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z]+$')]),  
   password:new FormControl('',[Validators.required,Validators.minLength(5)])
@@ -104,5 +116,15 @@ userLogin(item:any)
   console.warn(item);
 
 }
-
+getUserFormData(data:any)
+{
+  
+  this.userdata.saveUsers(data).subscribe((data)=>{
+    console.warn(data);
+  }
+  );
+  
 }
+}
+
+

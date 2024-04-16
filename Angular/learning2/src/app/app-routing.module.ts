@@ -6,15 +6,16 @@ import { UserComponent } from './user/user.component';
 import { NoPageComponent} from './no-page/no-page.component'
 import { AboutCompanyComponent } from './about-company/about-company.component';
 import { AboutMeComponent} from './about-me/about-me.component';
+import { HomeInnerComponent } from './home-inner/home-inner.component';
 
 
 const routes: Routes = [
   {
-    path:'about',
     component:AboutComponent,
+    path:'about',
     children:[
       {path:'company',component:AboutCompanyComponent},
-      {path:'me',component:AboutMeComponent},
+      {path:'me',component:AboutMeComponent}
     ]
   },
   {
@@ -23,7 +24,14 @@ const routes: Routes = [
   },
   {
     path:'',
-    component:HomeComponent
+    component:HomeComponent,
+    children:[
+      {
+        path:'home-inner',
+        component:HomeInnerComponent
+      },
+    ]
+
   },
   {
     path:'**',

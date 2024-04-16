@@ -130,3 +130,21 @@
     <button [disabled]="loginForm.invalid" >Login</button>
     </form> -->
     <br/>
+    <h1>Header</h1>
+    <ul>
+      <li *ngFor="let user of users2">
+        {{user.email}}:{{user.age}}
+
+      </li>
+    </ul>
+    <app-footer></app-footer>
+    <h1>Post API method</h1>
+ <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+    <input type="text" ngModel placeholder="Enter Username"  name="name"/>
+    <br/>
+    <br/>
+    <input type="text" ngModel placeholder="Enter Email" name="email"  />
+    <br/>
+    <br/>
+    <button >Add New User</button>
+    </form>
