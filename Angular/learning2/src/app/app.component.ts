@@ -3,12 +3,23 @@ import { NgForm, Validators } from '@angular/forms';
 import {FormControl,FormControlName,FormGroup} from '@angular/forms';
 import { UserdataService } from './services/userdata.service';
 
+interface dataType
+{
+  name:string,
+  id:number,
+  indian:boolean,
+  address:any
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })  
 export class AppComponent {
+    getData6()
+    {
+ const data:dataType={name:"monish",id:1,indian:true,address:{city:"pune",state:"maharashtra"}};
+    }
   users2:any;
   constructor(private userdata:UserdataService)
   {
@@ -123,7 +134,7 @@ getUserFormData(data:any)
     console.warn(data);
   }
   );
-  
+
 }
 }
 
